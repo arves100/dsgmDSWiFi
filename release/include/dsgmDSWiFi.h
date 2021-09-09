@@ -9,4 +9,6 @@ enum WIRELESS_MODE {
 
 extern enum WIRELESS_MODE wirelessMode;
 
-inline void setWirelessMode(enum WIRELESS_MODE mode);
+static inline void setWirelessMode(enum WIRELESS_MODE mode) {
+  if(mode == WIRELESS_MODE_WIFI || mode == WIRELESS_MODE_NIFI) wirelessMode = mode;
+}
